@@ -39,9 +39,13 @@
  * method returns false. Assume that the source seat is occupied when the method 
  * is called.
  * 
- * Write the method print, which prints out the 2D array theaterSeats.
- * The format for the print function should begin with a 1 or 2 depending on 
- * the tier and an 'O' or 'X' if it is available or unavailable, respectively.
+ * Write the method toString, which converts the 2D array theaterSeats in a string.
+ * The format for the toString method should begin with a 1 or 2 on each line 
+ * depending on the tier and an 'O' or 'X' if it is available or unavailable, 
+ * respectively, with a space in between each seat.
+ * 
+ * HINT: In order to have your string print on multiple lines you will have to 
+ * add a newline inbetween each row. The character for this is "\n".
  * 
  * EXAMPLE:
  * theaterSeats has 5 seats in each row and has two tier 1 rows and 3 tier 2 rows.
@@ -95,11 +99,12 @@ public class Theater {
     }
 
     /** COMPLETE THIS METHOD
-     * Prints out the array of theaterSeats as described in the instructions.
+     * Returns a string of the theaterSeats in a format described in the 
+     * instructions.
      */
-    public void print() {
+    public String toString() {
         // Insert your code below
 
-
+        return "";
     }
 }
