@@ -33,7 +33,7 @@
  * 
  * The reassignSeat method has four int parameters representing the row and the 
  * column indexes of the source ("from") and destination ("to") seats. If the 
- * reassignment is possible, the source serat becomes available, the destination 
+ * reassignment is possible, the source seat becomes available, the destination 
  * seat becomes unavailable, and the method returns true. If the seat 
  * reassignment is not possible, no changes are made to either seat and the 
  * method returns false. Assume that the source seat is occupied when the method 
@@ -56,8 +56,6 @@
  * 2 X X X X O
  */
 
-package main.java;
-
 public class Theater {
     private Seat[][] theaterSeats;
 
@@ -76,12 +74,17 @@ public class Theater {
      * @param col is the selected column
      * @return true if seat assigning is possible, false otherwise
      */
-    public boolean assignSeat(int row, int col) {
-        if (row < theaterSeats.length && col < theaterSeats[0].length &&
-            theaterSeats[row][col].isAvailable()) {
+    public void assignSeat(int row, int col) {
+        if (row < theaterSeats.length && col < theaterSeats[0].length)
             theaterSeats[row][col].setAvailability(false);
-        }
-        return false;
+    }
+
+    /**
+     * Helper method for testing purposes.
+     * @return member variable theaterSeats
+     */
+    public Seat[][] getTheaterSeats() {
+        return theaterSeats;
     }
 
     /** COMPLETE THIS METHOD
@@ -104,6 +107,7 @@ public class Theater {
      */
     public String toString() {
         // Insert your code below
+
 
         return "";
     }

@@ -1,5 +1,3 @@
-package main.java;
-
 public class Seat {
     private boolean available;
     private int tier;
